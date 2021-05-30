@@ -7,18 +7,29 @@ const ContactList = (props) => {
 
   const deleteContact = (id) => {
     props.getContactId(id);
-  }
+  };
 
-  const showContactList = props.contacts.map((contact) => {
+  const contacts = [
+    {
+      id: "1",
+      name: "Bukola",
+      email: "bukola@gmail.com",
+    },
+  ];
+  const showContactList = contacts.map((contact) => {
     return (
-      <ContactCard  contact= {contact} clickDeleteHandler={deleteContact} key={contact.id} />
+      <ContactCard
+        contact={contact}
+        clickDeleteHandler={deleteContact}
+        key={contact.id}
+      />
     );
   });
 
   return (
-    <div className="ui celled list">
-      <h3>Contact List</h3>
-      {showContactList}
+    <div>
+       <div style ={{marginTop: '90px'}}><h1>Contact List</h1> </div>
+      <div className="ui celled list">{showContactList}</div>
     </div>
   );
 };
