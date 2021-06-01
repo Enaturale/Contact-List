@@ -21,6 +21,10 @@ const ContactList = (props) => {
     );
   });
 
+  const getSearchTerm = () =>{
+    
+  }
+
   return (
     <div>
       <div style={{ marginTop: "90px" }}>
@@ -35,6 +39,12 @@ const ContactList = (props) => {
             </button>
           </Link>
         </h1>
+      </div>
+      <div className = "ui search">
+        <div className ="ui icon input">
+          <input type ="text" placeholder ="Search Contact" className="prompt" value={props.value} onChange={getSearchTerm}/>
+          <i className="search icon"></i>
+        </div>
       </div>
       <div className="ui celled list">{showContactList}</div>
     </div>
