@@ -23,16 +23,11 @@ const ContactCard = (props) => {
           style={{ color: "red", marginTop: "7px", marginRight: "10px" }}
           onClick={() => props.clickDeleteHandler(id)}
         />
-        <Link
-          to={{ pathname: `/edit`, state: { contact: props.contact } }}
-        >
-        <i
-          className="edit alternative outline icon"
-          style={{ color: "blue" }}
-          
-        >
-          
-        </i>
+        <Link to={{ pathname: `/edit`, state: { contact: props.contact } }}>
+          <i
+            className="edit alternative outline icon"
+            style={{ color: "blue" }}
+          ></i>
         </Link>
       </div>
     </div>
